@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">FormsEmbeddingPreview.Droid</string>
+  <string name="main_title">Welcome to the Android app!</string>
+  <string name="main_text">This is your native Android app. The button below will navigate to an embedded Xamarin.Forms ContentPage.</string>
+</resources>
