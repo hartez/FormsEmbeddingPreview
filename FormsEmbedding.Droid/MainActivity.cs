@@ -35,10 +35,7 @@ namespace FormsEmbeddingPreview.Droid
 
 		public void NavigateToTipCalc()
 		{
-			if (_tipCalc == null)
-			{
-				_tipCalc = new TipCalcPage().CreateSupportFragment(this);
-			}
+			_tipCalc = _tipCalc ?? new TipCalcPage().CreateSupportFragment(this);
 
 			var ft = SupportFragmentManager.BeginTransaction();
 

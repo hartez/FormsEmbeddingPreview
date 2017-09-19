@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="FormsEmbeddingPreview.UWP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FormsEmbeddingPreview.UWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Margin="20" HorizontalAlignment="Center"
+                   FontWeight="Bold"
+                   Text="Welcome to the UWP app!"></TextBlock>
+
+        <TextBlock Grid.Row="1" TextWrapping="WrapWholeWords" Margin="20">
+            This is your native UWP app. The button below will navigate to an embedded Xamarin.Forms ContentPage.
+        </TextBlock>
+
+        <Button Grid.Row="2" VerticalAlignment="Bottom"
+                Margin="20" HorizontalAlignment="Center"
+                Click="TipCalcButtonClicked">
+            Tip Calculator
+        </Button>
+        
+    </Grid>
+</Page>
