@@ -1,11 +1,48 @@
 ﻿using System;
 using System.ComponentModel;
+using Xamarin.Forms;
 
 namespace TipCalc
 {
+	public static class Messages
+	{
+		public static object Sender = new object();
+
+		public const string InitialAmount = "InitialAmount";
+		public const string Tip = "Tip";
+	}
+
+	public class InitialAmountArgs
+	{
+		public InitialAmountArgs(double initialAmount)
+		{
+			InitialAmount = initialAmount;
+		}
+
+		public double InitialAmount { get; }
+	}
+
+	public class TipArgs
+	{
+		public TipArgs(double tip)
+		{
+			Tip = tip;
+		}
+
+		public double Tip { get; }
+	}
+
 	class TipCalcModel : INotifyPropertyChanged
 	{
 		double subTotal, postTaxTotal, tipPercent, tipAmount, total;
+
+		internal TipCalcModel()
+		{
+			MessagingCenter.Subscribe<object, InitialAmountArgs>(this, Messages.InitialAmount, (s, e) =>
+			{
+				SubTotal = e.InitialAmount;
+			});
+		}
 
 		public event PropertyChangedEventHandler PropertyChanged;
 
@@ -68,6 +105,9 @@ namespace TipCalc
 				{
 					tipAmount = value;
 					OnPropertyChanged("TipAmount");
+
+					// Let any interested parties know that the tip value has changed
+					MessagingCenter.Send(Messages.Sender, Messages.Tip, new TipArgs(value));
 				}
 			}
 			get

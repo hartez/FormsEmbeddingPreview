@@ -12,6 +12,7 @@
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         
         <TextBlock Margin="20" HorizontalAlignment="Center"
@@ -22,7 +23,18 @@
             This is your native UWP app. The button below will navigate to an embedded Xamarin.Forms ContentPage.
         </TextBlock>
 
-        <Button Grid.Row="2" VerticalAlignment="Bottom"
+        <StackPanel Grid.Row="2" Margin="20">
+            <TextBlock Margin="5">Initial Amount:</TextBlock>
+            <TextBox Margin="5" Text="{Binding InitialAmount, Mode=TwoWay}"
+                     InputScope="CurrencyAmount"></TextBox>
+
+            <TextBlock Margin="5">Calculated Tip:</TextBlock>
+            <TextBlock Margin="5" HorizontalAlignment="Center"
+                       Text="{Binding TipCurrency}"></TextBlock>
+        </StackPanel>
+        
+        
+        <Button Grid.Row="3" VerticalAlignment="Center"
                 Margin="20" HorizontalAlignment="Center"
                 Click="TipCalcButtonClicked">
             Tip Calculator

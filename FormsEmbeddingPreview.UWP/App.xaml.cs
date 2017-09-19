@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using TipCalc;
 using Xamarin.Forms;
 using Application = Windows.UI.Xaml.Application;
 using Frame = Windows.UI.Xaml.Controls.Frame;
@@ -26,6 +27,8 @@ namespace FormsEmbeddingPreview.UWP
     /// </summary>
     sealed partial class App : Application
     {
+	    internal Lazy<ContentPage> TipCalc = new Lazy<ContentPage>(() => new TipCalcPage());
+
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
