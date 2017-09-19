@@ -27,25 +27,25 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <!-- Row 0 -->
-        <Label Text="Food &amp; Drink:" Grid.Row="0" Grid.Column="0" Font="Large" HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
+        <Label Text="Food &amp; Drink:" Grid.Row="0" Grid.Column="0"  HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
         <Entry Grid.Row="0" Grid.Column="1" Keyboard="Numeric" Placeholder="Subtotal" Text="{Binding SubTotal, Converter={StaticResource stringConverter}}" />
         <!-- Row 1 -->
-        <Label Text="Total after Tax:" Grid.Row="1" Grid.Column="0" Font="Large" HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
+        <Label Text="Total after Tax:" Grid.Row="1" Grid.Column="0"  HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
         <Entry Grid.Row="1" Grid.Column="1" Keyboard="Numeric" Placeholder="Receipt total" Text="{Binding PostTaxTotal, Converter={StaticResource stringConverter}}" />
         <!-- Row 2 -->
-        <Label Text="Tip Percent:" Grid.Row="2" Grid.Column="0" Font="Large" HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
+        <Label Text="Tip Percent:" Grid.Row="2" Grid.Column="0"  HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
         <Entry Grid.Row="2" Grid.Column="1" Keyboard="Numeric" Text="{Binding TipPercent, Converter={StaticResource stringConverter}}" />
         <!-- Row 3 -->
         <Slider Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Minimum="0" Maximum="100" Value="{Binding TipPercent, Mode=TwoWay, Converter={StaticResource roundConverter}, ConverterParameter=0.5}" />
         <!-- Row 4 -->
-        <Label Text="Tip Amount:" Grid.Row="4" Grid.Column="0" Font="Large" HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
+        <Label Text="Tip Amount:" Grid.Row="4" Grid.Column="0"  HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
         <ContentView BackgroundColor="#40808080" Grid.Row="4" Grid.Column="1" Padding="10, 10, 40, 10">
-            <Label Text="{Binding TipAmount, StringFormat='{0:C}'}" Font="Large" HorizontalTextAlignment="End" />
+            <Label Text="{Binding TipAmount, StringFormat='{0:C}'}"  HorizontalTextAlignment="End" />
         </ContentView>
         <!-- Row 5 -->
-        <Label Text="Total:" Grid.Row="5" Grid.Column="0" Font="Large" HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
+        <Label Text="Total:" Grid.Row="5" Grid.Column="0"  HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
         <ContentView BackgroundColor="#40808080" Grid.Row="5" Grid.Column="1" Padding="10, 10, 40, 10">
-            <Label Text="{Binding Total, StringFormat='{0:C}'}" Font="Large" HorizontalTextAlignment="End" />
+            <Label Text="{Binding Total, StringFormat='{0:C}'}"  HorizontalTextAlignment="End" />
         </ContentView>
     </Grid>
 </ContentPage>
