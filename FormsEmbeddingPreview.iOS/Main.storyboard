@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="218">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+    </dependencies>
+    <scene sceneID="197">
+        <objects>
+            <viewController id="198" sceneMemberID="viewController" customClass="ViewController">
+                <layoutGuides>
+                    <viewControllerLayoutGuide type="top" id="195"/>
+                    <viewControllerLayoutGuide type="bottom" id="196"/>
+                </layoutGuides>
+                <view key="view" contentMode="scaleToFill" id="199">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="209" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                            <rect key="frame" x="113" y="167" width="205" height="30"/>
+                            <state key="normal" title="Tip Calculator">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                </view>
+                <connections>
+                    <outlet property="UIViewController" destination="199" id="name-outlet-199"/>
+                    <outlet property="NavigateToTipCalculator" destination="209" id="name-outlet-209"/>
+                </connections>
+            </viewController>
+            <placeholder placeholderIdentifier="IBFirstResponder" id="200" userLabel="First Responder" sceneMemberID="firstResponder"/>
+        </objects>
+        <point key="canvasLocation" x="70" y="38"/>
+    </scene>
+    <scenes>
+        <scene sceneID="217">
+            <objects>
+                <viewController id="218" sceneMemberID="viewController" customClass="ViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="215"/>
+                        <viewControllerLayoutGuide type="bottom" id="216"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="219">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="228" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="108" y="350" width="104" height="30"/>
+                                <state key="normal" title="Tip Calculator">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="1612" firstAttribute="width" constant="104"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1612"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="1612"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is your native iOS app. The button below will navigate to an embedded Xamarin.Forms ContentPage." textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="450" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="3">
+                                <rect key="frame" x="16" y="182" width="288" height="106"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="1605" firstAttribute="width" constant="288"/>
+                                    <constraint id="1606" firstAttribute="height" constant="106"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1605"/>
+                                        <exclude reference="1606"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="1605"/>
+                                        <include reference="1606"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the iOS app!" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" id="675" translatesAutoresizingMaskIntoConstraints="NO" baselineAdjustment="alignBaselines" numberOfLines="0">
+                                <rect key="frame" x="16" y="142" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="1609"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="1609" firstAttribute="width" constant="288"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1609"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint id="1604" firstItem="450" firstAttribute="top" secondItem="219" secondAttribute="top" constant="182"/>
+                            <constraint id="1608" firstItem="675" firstAttribute="top" secondItem="219" secondAttribute="top" constant="142"/>
+                            <constraint id="1611" firstItem="219" firstAttribute="bottom" secondItem="228" secondAttribute="bottom" constant="100">
+                            </constraint>
+                            <constraint id="1635" firstItem="675" firstAttribute="centerX" secondItem="219" secondAttribute="centerX"/>
+                            <constraint id="1901" firstItem="450" firstAttribute="centerX" secondItem="219" secondAttribute="centerX">
+                            </constraint>
+                            <constraint id="2394" firstItem="228" firstAttribute="centerX" secondItem="219" secondAttribute="centerX">
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1604"/>
+                                <exclude reference="1608"/>
+                                <exclude reference="1611"/>
+                                <exclude reference="1635"/>
+                                <exclude reference="1901"/>
+                                <exclude reference="2394"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="1604"/>
+                                <include reference="1608"/>
+                                <include reference="1611"/>
+                                <include reference="1635"/>
+                                <include reference="1901"/>
+                                <include reference="2394"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="NavigateToTipCalculator" destination="228" id="name-outlet-228"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="220" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-352" y="-521"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

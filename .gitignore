@@ -15,3 +15,4 @@ UpgradeLog*
 *.designer.cs
 *project.lock.json
 packages
+!FormsEmbeddingPreview.iOS/*.designer.cs

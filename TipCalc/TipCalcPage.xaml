@@ -4,7 +4,11 @@
              xmlns:tipCalc="clr-namespace:TipCalc;assembly=TipCalc"
              x:Class="TipCalc.TipCalcPage">
     <ContentPage.Padding>
-        <OnPlatform x:TypeArguments="Thickness" iOS="5, 20, 5, 0" Android="5, 0, 5, 0" WinPhone="5, 0, 5, 0" />
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS">10, 80, 10, 0</On>
+            <On Platform="Android">5, 0, 5, 0</On>
+            <On Platform="UWP">5, 0, 5, 0</On>
+        </OnPlatform>
     </ContentPage.Padding>
     <ContentPage.Resources>
         <ResourceDictionary>
