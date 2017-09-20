@@ -19,6 +19,8 @@ namespace FormsEmbeddingPreview.iOS
 		UINavigationController _navigation;
 		ViewController _mainController;
 
+		internal double InitialAmount { get; set; }
+
 		public override UIWindow Window
 		{
 			get;
@@ -48,6 +50,9 @@ namespace FormsEmbeddingPreview.iOS
 			{
 				_tipCalc = new TipCalcPage().CreateViewController();
 			}
+
+			MessagingCenter.Send(TipCalc.Messages.Sender, TipCalc.Messages.InitialAmount, 
+				new InitialAmountArgs(InitialAmount));
 
 			_navigation.PushViewController(_tipCalc, true);
 		}

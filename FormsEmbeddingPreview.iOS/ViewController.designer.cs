@@ -16,13 +16,58 @@ namespace FormsEmbeddingPreview.iOS
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel InitAmountLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField InitialAmount { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel MainText { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton NavigateToTipCalculator { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel TipAmount { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel TipAmountLabel { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
+            if (InitAmountLabel != null) {
+                InitAmountLabel.Dispose ();
+                InitAmountLabel = null;
+            }
+
+            if (InitialAmount != null) {
+                InitialAmount.Dispose ();
+                InitialAmount = null;
+            }
+
+            if (MainText != null) {
+                MainText.Dispose ();
+                MainText = null;
+            }
+
             if (NavigateToTipCalculator != null) {
                 NavigateToTipCalculator.Dispose ();
                 NavigateToTipCalculator = null;
+            }
+
+            if (TipAmount != null) {
+                TipAmount.Dispose ();
+                TipAmount = null;
+            }
+
+            if (TipAmountLabel != null) {
+                TipAmountLabel.Dispose ();
+                TipAmountLabel = null;
             }
         }
     }

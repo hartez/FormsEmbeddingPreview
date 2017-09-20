@@ -41,31 +41,19 @@
                         <viewControllerLayoutGuide type="bottom" id="216"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="219">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="228" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="108" y="350" width="104" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="228" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="112" y="430" width="96" height="30"/>
                                 <state key="normal" title="Tip Calculator">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <constraints>
-                                    <constraint id="1612" firstAttribute="width" constant="104"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="1612"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="1612"/>
-                                    </mask>
-                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is your native iOS app. The button below will navigate to an embedded Xamarin.Forms ContentPage." textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="450" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="3">
-                                <rect key="frame" x="16" y="182" width="288" height="106"/>
+                                <rect key="frame" x="16" y="120" width="288" height="106"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -87,7 +75,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the iOS app!" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" id="675" translatesAutoresizingMaskIntoConstraints="NO" baselineAdjustment="alignBaselines" numberOfLines="0">
-                                <rect key="frame" x="16" y="142" width="288" height="21"/>
+                                <rect key="frame" x="16" y="80" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -105,17 +93,64 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="2639" translatesAutoresizingMaskIntoConstraints="NO" text="0.00" fixedFrame="YES">
+                                <rect key="frame" x="134" y="259" width="50" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="Initial Amount:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2640" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="105" y="230" width="109" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <color key="highlightedColor" colorSpace="calibratedRGB" red="0" green="0" blue="0" alpha="1"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Amount:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3138" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="112" y="305" width="94" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3139" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="188" y="334" width="0.0" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3192" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="0" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="25" fixedFrame="YES">
+                                <rect key="frame" x="119" y="348" width="80" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="80" height="1"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <color key="highlightedColor" colorSpace="calibratedRGB" red="0.92549019607843142" green="0" blue="0" alpha="1"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <constraints>
-                            <constraint id="1604" firstItem="450" firstAttribute="top" secondItem="219" secondAttribute="top" constant="182"/>
-                            <constraint id="1608" firstItem="675" firstAttribute="top" secondItem="219" secondAttribute="top" constant="142"/>
-                            <constraint id="1611" firstItem="219" firstAttribute="bottom" secondItem="228" secondAttribute="bottom" constant="100">
-                            </constraint>
+                            <constraint id="1604" firstItem="450" firstAttribute="top" secondItem="219" secondAttribute="top" constant="120"/>
+                            <constraint id="1608" firstItem="675" firstAttribute="top" secondItem="219" secondAttribute="top" constant="80"/>
                             <constraint id="1635" firstItem="675" firstAttribute="centerX" secondItem="219" secondAttribute="centerX"/>
                             <constraint id="1901" firstItem="450" firstAttribute="centerX" secondItem="219" secondAttribute="centerX">
                             </constraint>
-                            <constraint id="2394" firstItem="228" firstAttribute="centerX" secondItem="219" secondAttribute="centerX">
+                            <constraint id="4397" firstItem="2640" firstAttribute="top" secondItem="215" secondAttribute="bottom" constant="210"/>
+                            <constraint id="4683" firstItem="450" firstAttribute="centerX" secondItem="2640" secondAttribute="centerX" constant="25">
+                                <variation key="heightClass=regular-widthClass=compact" constant="1"/>
                             </constraint>
+                            <constraint id="4938" firstItem="2639" firstAttribute="centerX" secondItem="2640" secondAttribute="centerX"/>
+                            <constraint id="4939" firstItem="3138" firstAttribute="centerY" secondItem="2640" secondAttribute="centerY" constant="77"/>
+                            <constraint id="4941" firstItem="2640" firstAttribute="top" secondItem="450" secondAttribute="centerY" constant="57"/>
+                            <constraint id="4942" firstItem="2639" firstAttribute="top" secondItem="2640" secondAttribute="centerY" constant="18"/>
+                            <constraint id="4943" firstItem="3138" firstAttribute="top" secondItem="2639" secondAttribute="centerY" constant="33"/>
+                            <constraint id="4946" firstItem="219" firstAttribute="centerX" secondItem="3138" secondAttribute="centerX" constant="1"/>
+                            <constraint id="4949" firstItem="219" firstAttribute="centerX" secondItem="3192" secondAttribute="centerX" constant="1"/>
+                            <constraint id="4950" firstItem="3192" firstAttribute="top" secondItem="3138" secondAttribute="bottom" constant="20"/>
+                            <constraint id="5215" firstItem="219" firstAttribute="bottom" secondItem="228" secondAttribute="bottom" constant="20"/>
+                            <constraint id="5216" firstItem="228" firstAttribute="centerX" secondItem="219" secondAttribute="centerX"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -124,7 +159,37 @@
                                 <exclude reference="1611"/>
                                 <exclude reference="1635"/>
                                 <exclude reference="1901"/>
-                                <exclude reference="2394"/>
+                                <exclude reference="4534"/>
+                                <exclude reference="4535"/>
+                                <exclude reference="5280"/>
+                                <exclude reference="5852"/>
+                                <exclude reference="5853"/>
+                                <exclude reference="5854"/>
+                                <exclude reference="5855"/>
+                                <exclude reference="5858"/>
+                                <exclude reference="5859"/>
+                                <exclude reference="6144"/>
+                                <exclude reference="6145"/>
+                                <exclude reference="6146"/>
+                                <exclude reference="6147"/>
+                                <exclude reference="4397"/>
+                                <exclude reference="4683"/>
+                                <exclude reference="4938"/>
+                                <exclude reference="4939"/>
+                                <exclude reference="4941"/>
+                                <exclude reference="4942"/>
+                                <exclude reference="4943"/>
+                                <exclude reference="4946"/>
+                                <exclude reference="4949"/>
+                                <exclude reference="4950"/>
+                                <exclude reference="5215"/>
+                                <exclude reference="5216"/>
+                            </mask>
+                            <mask key="subviews">
+                                <exclude reference="2639"/>
+                                <exclude reference="3138"/>
+                                <exclude reference="3139"/>
+                                <exclude reference="3192"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -134,12 +199,47 @@
                                 <include reference="1611"/>
                                 <include reference="1635"/>
                                 <include reference="1901"/>
-                                <include reference="2394"/>
+                                <include reference="4534"/>
+                                <include reference="4535"/>
+                                <include reference="5280"/>
+                                <include reference="5852"/>
+                                <include reference="5853"/>
+                                <include reference="5854"/>
+                                <include reference="5855"/>
+                                <include reference="5858"/>
+                                <include reference="5859"/>
+                                <include reference="6144"/>
+                                <include reference="6145"/>
+                                <include reference="6146"/>
+                                <include reference="6147"/>
+                                <include reference="4397"/>
+                                <include reference="4683"/>
+                                <include reference="4938"/>
+                                <include reference="4939"/>
+                                <include reference="4941"/>
+                                <include reference="4942"/>
+                                <include reference="4943"/>
+                                <include reference="4946"/>
+                                <include reference="4949"/>
+                                <include reference="4950"/>
+                                <include reference="5215"/>
+                                <include reference="5216"/>
+                            </mask>
+                            <mask key="subviews">
+                                <include reference="2639"/>
+                                <include reference="3138"/>
+                                <include reference="3139"/>
+                                <include reference="3192"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="NavigateToTipCalculator" destination="228" id="name-outlet-228"/>
+                        <outlet property="InitialAmount" destination="2639" id="name-outlet-2639"/>
+                        <outlet property="TipAmount" destination="3192" id="name-outlet-3192"/>
+                        <outlet property="MainText" destination="450" id="name-outlet-450"/>
+                        <outlet property="TipAmountLabel" destination="3138" id="name-outlet-3138"/>
+                        <outlet property="InitAmountLabel" destination="2640" id="name-outlet-2640"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="220" userLabel="First Responder" sceneMemberID="firstResponder"/>

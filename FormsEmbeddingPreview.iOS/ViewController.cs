@@ -1,6 +1,8 @@
 ﻿using Foundation;
 using System;
+using TipCalc;
 using UIKit;
+using Xamarin.Forms;
 
 namespace FormsEmbeddingPreview.iOS
 {
@@ -13,7 +15,22 @@ namespace FormsEmbeddingPreview.iOS
 	    public override void ViewDidLoad()
 	    {
 		    base.ViewDidLoad();
+
+		  //  InitialAmount.CenterXAnchor.ConstraintEqualTo(MainText.CenterXAnchor).Active = true;
+
+		    InitialAmount.EditingChanged += (sender, args) =>
+		    {
+			    double amount;
+			    if (double.TryParse(InitialAmount.Text, out amount))
+			    {
+				    AppDelegate.Shared.InitialAmount = amount;
+			    }
+		    };
+
 		    NavigateToTipCalculator.TouchUpInside += (sender, e) => AppDelegate.Shared.NavigateToTipCalc();
+
+		    MessagingCenter.Subscribe<object, TipArgs>(this, TipCalc.Messages.Tip, 
+			    (obj, args) => TipAmount.Text = args.Tip.ToString("C"));
 	    }
     }
 }
