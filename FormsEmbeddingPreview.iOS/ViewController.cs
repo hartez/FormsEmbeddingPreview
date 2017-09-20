@@ -16,8 +16,6 @@ namespace FormsEmbeddingPreview.iOS
 	    {
 		    base.ViewDidLoad();
 
-		  //  InitialAmount.CenterXAnchor.ConstraintEqualTo(MainText.CenterXAnchor).Active = true;
-
 		    InitialAmount.EditingChanged += (sender, args) =>
 		    {
 			    double amount;
@@ -29,7 +27,7 @@ namespace FormsEmbeddingPreview.iOS
 
 		    NavigateToTipCalculator.TouchUpInside += (sender, e) => AppDelegate.Shared.NavigateToTipCalc();
 
-		    MessagingCenter.Subscribe<object, TipArgs>(this, TipCalc.Messages.Tip, 
+		    MessagingCenter.Subscribe<object, TipArgs>(TipCalc.Messages.Sender, TipCalc.Messages.Tip, 
 			    (obj, args) => TipAmount.Text = args.Tip.ToString("C"));
 	    }
     }
