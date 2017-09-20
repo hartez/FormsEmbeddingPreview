@@ -33,5 +33,36 @@
     android:textColor="@android:color/white"
     android:layout_margin="20dp"
     android:width="165dp" />
+
+  <TextView
+    android:text="@string/initialamount_label"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/initAmountLabel"
+    android:layout_margin="20dp"
+    android:textColor="@android:color/white" />
+
+  <EditText
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/initialAmount"
+    android:layout_margin="20dp"
+    android:inputType="number"
+    android:width="165dp"/>
+
+  <TextView
+    android:text="@string/tipamount_label"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/tipAmountLabel"
+    android:layout_margin="20dp"
+    android:textColor="@android:color/white" />
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/tipAmount"
+    android:layout_margin="20dp"
+    android:textColor="@android:color/white" />
   
 </LinearLayout>

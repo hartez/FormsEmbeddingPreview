@@ -3,4 +3,6 @@
   <string name="app_name">FormsEmbeddingPreview.Droid</string>
   <string name="main_title">Welcome to the Android app!</string>
   <string name="main_text">This is your native Android app. The button below will navigate to an embedded Xamarin.Forms ContentPage.</string>
+  <string name="tipamount_label">Calculated Tip:</string>
+  <string name="initialamount_label">Initial Amount:</string>
 </resources>
