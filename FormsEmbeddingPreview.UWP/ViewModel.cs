@@ -22,7 +22,7 @@ namespace FormsEmbeddingPreview.UWP
 		public ViewModel()
 		{
 			InitialAmount = 0;
-			MessagingCenter.Subscribe<object, TipArgs>(this, Messages.Tip, 
+			MessagingCenter.Subscribe<object, TipArgs>(Messages.Sender, Messages.Tip, 
 				(obj, args) => Tip = args.Tip);
 		}
 
