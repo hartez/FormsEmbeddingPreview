@@ -4,6 +4,6 @@
     <NuGetPackageRoot>$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
   </PropertyGroup>
   <ImportGroup>
-    <Import Project="$(NuGetPackageRoot)\Xamarin.Forms\2.4.1.2472\build\netstandard1.0\Xamarin.Forms.props" Condition="Exists('$(NuGetPackageRoot)\Xamarin.Forms\2.4.1.2472\build\netstandard1.0\Xamarin.Forms.props')" />
+    <Import Project="$(NuGetPackageRoot)\Xamarin.Forms\3.0.0.101-embeddingpreview\build\netstandard1.0\Xamarin.Forms.props" Condition="Exists('$(NuGetPackageRoot)\Xamarin.Forms\3.0.0.101-embeddingpreview\build\netstandard1.0\Xamarin.Forms.props')" />
   </ImportGroup>
 </Project>

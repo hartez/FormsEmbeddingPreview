@@ -1,7 +1,7 @@
 ﻿{
   "dependencies": {
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.1.0",
-    "Xamarin.Forms": "2.4.1.2472"
+    "Xamarin.Forms": "3.0.0.101-embeddingpreview"
   },
   "frameworks": {
     "uap10.0": {}
