@@ -1,4 +1,4 @@
-# Sample for Xamarin.Forms Embedding Preview
+# Sample for Xamarin.Forms Native Forms Preview
 
 I'll add a link to the blog post when it's up
 
